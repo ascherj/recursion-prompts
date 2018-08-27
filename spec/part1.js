@@ -780,6 +780,8 @@
         expect(divide(-275, -582)).to.equal(~~(-275 / -582));
         expect(divide(0, 32)).to.equal(~~(0 / 32));
         expect(divide(0, 0)).to.be.NaN;
+        expect(divide(5, -2)).to.equal(~~(5 / -2)); // Added to test function if
+        expect(divide(18, -5)).to.equal(~~(18 / -5)); // 'y' is negative and 'x' is positive
       });
 
       it('should use recursion by calling self', function() {
