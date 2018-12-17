@@ -124,7 +124,7 @@ var reverse = function(string) {
 // 10. Write a function that determines if a string is a palindrome.
 var palindrome = function(string) {
   string = string.toLowerCase();
-  
+
   if (string.length <= 1) {
     return true;
   } else if (string.charAt(0) === string.slice(-1)) {
@@ -145,7 +145,7 @@ var modulo = function(x, y) {
   }
   if (x === 0) {
     return 0;
-  } 
+  }
 
   if (x > 0) {
     if (x - y === 0) {
@@ -246,7 +246,7 @@ var buildList = function(value, length) {
 // fizzBuzz(5) // ['1','2','Fizz','4','Buzz']
 var fizzBuzz = function(n) {
   var contents = String(n);
-  
+
   if (n === 0) {
     return [];
   }
