@@ -53,7 +53,29 @@ var sumBelow = function(n) {
 
 // 6. Get the integers within a range (x, y).
 // range(2,9); // [3,4,5,6,7,8]
+/*
+Input: {number} x, {number} y
+Output: {number[]}
+Constraints:
+  Time - O(abs(y - x))
+  Space - O(abs(y - x))
+Examples/edge cases:
+  2, 9 => [3, 4, 5, 6, 7, 8]
+  9, 2 => [8, 7, 6, 5, 4, 3]
+
+  same numbers
+    3, 3 => []
+  no numbers within range
+    3, 4 => []
+  negative numbers
+    -5, -2 => [-4, -3]
+    -2, -5 => [-3, -4]
+
+*/
 var range = function(x, y) {
+  if (Math.abs(y - x) <= 1) return [];
+  const val = x < y ? x + 1 : x - 1;
+  return [val].concat(range(val, y));
 };
 
 // 7. Compute the exponent of a number.
